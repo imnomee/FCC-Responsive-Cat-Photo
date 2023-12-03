@@ -49,3 +49,50 @@
         <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
     </figure>
 </section>
+<section>
+    <h2>Cat Form</h2>
+    <!-- action attribute tells where the information in the form will be going -->
+    <form action="https://freecatphotoapp.com/submit-cat-photo">
+        <fieldset>
+            <!-- radio[name] attribute is used to group the multiple inputs -->
+            <legend>Is your cat an indoor or outdoor cat?</legend>
+            <label
+                ><input
+                    type="radio"
+                    id="indoor"
+                    name="indoor-outdoor"
+                    value="indoor"
+                />
+                Indoor</label
+            >
+            <label
+                ><input
+                    type="radio"
+                    id="outdoor"
+                    name="indoor-outdoor"
+                    value="outdoor"
+                />
+                Outdoor</label
+            >
+        </fieldset>
+        <fieldset>
+            <legend>What's your cat's personality?</legend>
+            <input type="checkbox" id="loving" name="personality" />
+            <label for="loving">Loving</label>
+            <input type="checkbox" id="lazy" name="personality" />
+            <label for="lazy">Lazy</label>
+            <input type="checkbox" id="energetic" name="personality" />
+            <label for="energetic">Energetic</label>
+        </fieldset>
+        <!-- input[name] attribute is name of this field sent in the form
+            the data is based on name and value attributes of the input fields-->
+
+        <input
+            type="text"
+            name="catphotourl"
+            placeholder="cat photo URL"
+            required
+        />
+        <button type="submit">Submit</button>
+    </form>
+</section>
