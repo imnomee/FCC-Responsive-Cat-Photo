@@ -1,98 +1,119 @@
-<h1>CatPhoto App</h1>
-<section>
-    <h2>Cat Photos</h2>
-    <p>
-        See more
-        <a href="https://freecatphotoapp.com" target="_blank">cat photos</a> in
-        our gallery.
-    </p>
-    <!-- link targets: 
+<main>
+    <h1>CatPhoto App</h1>
+    <section>
+        <h2>Cat Photos</h2>
+        <p>
+            See more
+            <a href="https://freecatphotoapp.com" target="_blank">cat photos</a>
+            in our gallery.
+        </p>
+        <!-- link targets: 
         _blank = new window
         _self = same window
         _top = back to top
     -->
-    <a href="https://freecatphotoapp.com"
-        ><img
-            src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
-            alt="A cute orange cat lying on its back"
-    /></a>
-    <!-- 
-        we can wrap image in to link 
-        /> -->
-</section>
-<section>
-    <h2>Cat Lists</h2>
-    <h3>Things cats love:</h3>
-    <ul>
-        <li>cat nip</li>
-        <li>laser pointers</li>
-        <li>lasagna</li>
-    </ul>
-    <figure>
-        <img
-            src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg"
-            alt="A slice of lasagna on the plate."
-        />
-        <figcaption>Cats <em>love</em> lasagna.</figcaption>
-    </figure>
-    <h3>Top 3 things cats hate:</h3>
-    <ol>
-        <li>flea treatment</li>
-        <li>thunder</li>
-        <li>other cats</li>
-    </ol>
-    <figure>
-        <img
-            src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
-            alt="Five cats looking around a field."
-        />
-        <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
-    </figure>
-</section>
-<section>
-    <h2>Cat Form</h2>
-    <!-- action attribute tells where the information in the form will be going -->
-    <form action="https://freecatphotoapp.com/submit-cat-photo">
-        <fieldset>
-            <!-- radio[name] attribute is used to group the multiple inputs -->
-            <legend>Is your cat an indoor or outdoor cat?</legend>
-            <label
-                ><input
-                    type="radio"
-                    id="indoor"
-                    name="indoor-outdoor"
-                    value="indoor"
+        <a href="https://freecatphotoapp.com"
+            ><img
+                src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+                alt="A cute orange cat lying on its back"
+        /></a>
+        <!-- 
+            we can wrap image in to link 
+            /> -->
+    </section>
+    <section>
+        <h2>Cat Lists</h2>
+        <h3>Things cats love:</h3>
+        <ul>
+            <li>cat nip</li>
+            <li>laser pointers</li>
+            <li>lasagna</li>
+        </ul>
+        <figure>
+            <img
+                src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg"
+                alt="A slice of lasagna on the plate."
+            />
+            <figcaption>Cats <em>love</em> lasagna.</figcaption>
+        </figure>
+        <h3>Top 3 things cats hate:</h3>
+        <ol>
+            <li>flea treatment</li>
+            <li>thunder</li>
+            <li>other cats</li>
+        </ol>
+        <figure>
+            <img
+                src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+                alt="Five cats looking around a field."
+            />
+            <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
+        </figure>
+    </section>
+    <section>
+        <h2>Cat Form</h2>
+        <!-- action attribute tells where the information in the form will be going -->
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+            <fieldset>
+                <!-- radio[name] attribute is used to group the multiple inputs
+                input[name] attribute is name of this field sent in the form
+                the data is based on name and value attributes of the input fields
+                checked: will set the value selected by default in radio or checkbox-->
+                <legend>Is your cat an indoor or outdoor cat?</legend>
+                <label
+                    ><input
+                        type="radio"
+                        id="indoor"
+                        name="indoor-outdoor"
+                        value="indoor"
+                        checked
+                    />
+                    Indoor</label
+                >
+                <label
+                    ><input
+                        type="radio"
+                        id="outdoor"
+                        name="indoor-outdoor"
+                        value="outdoor"
+                    />
+                    Outdoor</label
+                >
+            </fieldset>
+            <fieldset>
+                <legend>What's your cat's personality?</legend>
+                <input
+                    type="checkbox"
+                    id="loving"
+                    name="personality"
+                    value="loving"
+                    checked
                 />
-                Indoor</label
-            >
-            <label
-                ><input
-                    type="radio"
-                    id="outdoor"
-                    name="indoor-outdoor"
-                    value="outdoor"
+                <label for="loving">Loving</label>
+                <input
+                    type="checkbox"
+                    id="lazy"
+                    name="personality"
+                    value="lazy"
                 />
-                Outdoor</label
-            >
-        </fieldset>
-        <fieldset>
-            <legend>What's your cat's personality?</legend>
-            <input type="checkbox" id="loving" name="personality" />
-            <label for="loving">Loving</label>
-            <input type="checkbox" id="lazy" name="personality" />
-            <label for="lazy">Lazy</label>
-            <input type="checkbox" id="energetic" name="personality" />
-            <label for="energetic">Energetic</label>
-        </fieldset>
-        <!-- input[name] attribute is name of this field sent in the form
-            the data is based on name and value attributes of the input fields-->
+                <label for="lazy">Lazy</label>
+                <input
+                    type="checkbox"
+                    id="energetic"
+                    name="personality"
+                    value="energetic"
+                />
+                <label for="energetic">Energetic</label>
+            </fieldset>
 
-        <input
-            type="text"
-            name="catphotourl"
-            placeholder="cat photo URL"
-            required
-        />
-        <button type="submit">Submit</button>
-    </form>
-</section>
+            <input
+                type="text"
+                name="catphotourl"
+                placeholder="cat photo URL"
+                required
+            />
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</main>
+<footer></footer>
